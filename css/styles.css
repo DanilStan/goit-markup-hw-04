@@ -40,7 +40,6 @@ body {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  /* outline: 2px solid tomato; */
 }
 
 .header {
@@ -90,12 +89,22 @@ body {
     color: var(--acent-color);
 }
 
-.site-nav:hover .icon,
-.site-nav:focus .icon {
+.auth-one .icon,
+.auth-two .icon {
+  fill: var(--secondary-text-color);
+}
+
+.auth-one:hover .icon,
+.auth-one:focus .icon,
+.auth-two:hover .icon,
+.auth-two:focus .icon {
   fill: var(--acent-color);
 }
 
-.site-nav .auth {
+
+
+.site-nav .auth-one,
+.site-nav .auth-two {
   color: var(--secondary-text-color);
 }
 
@@ -312,18 +321,106 @@ body {
 }
 
 .team-icon {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 }
 
-.team-icon .item-icon {
-  display: inline-block;
-  background-size: cover;
-  text-align: center;
+.team-icon:not(:last-child) {
+  margin-right: 10px;
 }
 
-.team-icon .item-icon:hover {
+.team-icon a {
+  display: flex;
+}
+
+.team-icon:hover,
+.team-icon:focus {
   background-color: var(--acent-color);
 }
+
+.svg-icon {
+  fill: #AFB1B8;
+}
+
+.team-icon:hover .svg-icon,
+.team-icon:focus .svg-icon {
+  fill: var(--primary-white-color);
+}
+
+.team-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 16px;
+}
+
+/* Поcтояные клиенты */
+
+.clients.section {
+  padding-top: 125px;
+}
+
+.clients-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  color: var(--title-text-color);
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+}
+
+.clients-list .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+}
+
+.clients-list .svg-item {
+  fill: #AFB1B8;
+}
+
+.clients-list .item:hover,
+.clients-list .item:focus {
+  border-color: var(--acent-color);
+}
+
+.clients-list .item:hover .svg-item,
+.clients-list .item:focus .svg-item {
+  fill: var(--acent-color);
+}
+
+.clients-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-list .item a {
+  display: flex;
+}
+
+
+
 
 /* Подвал */
 .footer {
@@ -366,6 +463,51 @@ body {
   display: inline-block;
 }
 
+.footer-flex {
+  display: flex;
+}
+
+.footer-list {
+  display: flex;
+}
+
+.footer-box {
+  margin-left: 70px;
+}
+
+.box-title {
+  margin-bottom: 20px;
+
+  color: var(--primary-white-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 44px;
+  width: 44px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-items + .footer-items {
+  margin-left: 10px;
+}
+
+.footer-items:hover,
+.footer-items:focus {
+  background-color: var(--acent-color);
+}
+
+.footer-items a {
+  display: flex;
+  background-color:;
+}
 /* 
 Страница портфолио "Шапка" сайта и "Футер"
 копируюся из страницы "Студия"
